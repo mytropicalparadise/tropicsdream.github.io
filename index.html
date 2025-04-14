@@ -1,117 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Fund My Tropical Paradise Bar!</title>
     <style>
-        <body>
-    <div class="container">
-        <header>
-            <h1>Help Fund My Tropical Paradise Bar!</h1>
-            <p>Support my dream of opening a bar on a tropical island with crypto donations!</p>
-        </header>
-        <div class="donation-buttons">
-            <h2>Make a Donation</h2>
-            <div class="buttons-container">
-                <!-- Bu kısımlar buttonları temsil ediyor. -->
-                <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-                    <input type="hidden" name="action" value="checkout" />
-                    <input type="hidden" name="data" value="...data-for-5-USD..." />
-                    <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 200px;" alt="Donate with CoinPayments" />
-                </form>
-                <!-- Diğer butonlar burada yer alacak. -->
-            </div>
-        </div>
-    </div>
-</body>
-    /* Genel Sayfa Stili */
-body {
-    font-family: 'Arial', sans-serif;
-    background: url('https://images.unsplash.com/photo-1501594907356-8815b1e3ca34?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fHRyb3BpY2FsfGVufDB8fHx8fDE2Nzk0MjYyMzA&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Sayfa Kapalı Alan */
-.container {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.7);  /* Arka planı koyu renk yapalım */
-    border-radius: 10px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Başlıklar */
-header h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #FFEB3B; /* Sarı renk */
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.2em;
-    color: #FFDD99; /* Hafif sarı */
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-/* Butonlar için stil */
-.donation-buttons {
-    margin-top: 40px;
-}
-
-.donation-buttons h2 {
-    font-size: 2em;
-    color: #FFEB3B;
-    margin-bottom: 30px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.donation-buttons input[type="image"] {
-    width: 200px;
-    height: 60px;
-    background-color: #FFEB3B;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-    object-fit: cover;
-}
-
-.donation-buttons input[type="image"]:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    background-color: #FFCA28;
-}
-
-/* Footer */
-footer {
-    margin-top: 40px;
-    font-size: 1em;
-    color: #FFDD99;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        h2 {
+            color: #ff6600;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container form {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Help Fund My Tropical Paradise Bar!</h1>
