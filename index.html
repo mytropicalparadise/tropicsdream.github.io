@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        <body>
+    <div class="container">
+        <header>
+            <h1>Help Fund My Tropical Paradise Bar!</h1>
+            <p>Support my dream of opening a bar on a tropical island with crypto donations!</p>
+        </header>
+        <div class="donation-buttons">
+            <h2>Make a Donation</h2>
+            <div class="buttons-container">
+                <!-- Bu kısımlar buttonları temsil ediyor. -->
+                <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+                    <input type="hidden" name="action" value="checkout" />
+                    <input type="hidden" name="data" value="...data-for-5-USD..." />
+                    <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 200px;" alt="Donate with CoinPayments" />
+                </form>
+                <!-- Diğer butonlar burada yer alacak. -->
+            </div>
+        </div>
+    </div>
+</body>
     /* Genel Sayfa Stili */
 body {
     font-family: 'Arial', sans-serif;
@@ -22,7 +43,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);  /* Arka planı koyu renk yapalım */
     border-radius: 10px;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
@@ -31,7 +52,7 @@ body {
 header h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #FFEB3B;
+    color: #FFEB3B; /* Sarı renk */
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -39,7 +60,7 @@ header h1 {
 
 header p {
     font-size: 1.2em;
-    color: #FFDD99;
+    color: #FFDD99; /* Hafif sarı */
     margin-bottom: 40px;
     font-weight: 300;
 }
