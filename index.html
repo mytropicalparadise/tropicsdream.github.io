@@ -16,37 +16,35 @@
     /* Body Stili */
     body {
       font-family: 'Inter', sans-serif;
-      min-height: 100 vh;
-      background: 
-        linear-gradient (rgba (0,0,0,0.5), 
-        url('https://i.postimg.cc/8cJ292n0/Flux-Dev-I-will-make-a-background-for-my-site-I-want-a-very-ni-0-1.jpg') center/cover fixed;
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.5), url('https://i.postimg.cc/8cJ292n0/Flux-Dev-I-will-make-a-background-for-my-site-I-want-a-very-ni-0-1.jpg') center/cover fixed);
       color: white;
-      padding: 2 rem;
+      padding: 2rem;
     }
 
     /* Container */
     .container {
-      max-width: 1200 px;
+      max-width: 1200px;
       margin: 0 auto;
-      background: rgba (0,0,0,0.7);
-      border-radius: 15 px;
-      padding: 2 rem;
+      background: rgba(0,0,0,0.7);
+      border-radius: 15px;
+      padding: 2rem;
     }
 
     /* Başlık */
     h1 {
       text-align: center;
-      font-size: 2.5 rem;
-      margin-bottom: 1.5 rem;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
       color: #FFD700;
     }
 
     /* Progress Bar */
     .progress {
-      height: 20 px;
-      background: rgba (255,255,255,0.2);
-      border-radius: 10 px;
-      margin: 2 rem 0;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      margin: 2rem 0;
       overflow: hidden;
     }
 
@@ -60,31 +58,31 @@
     /* Butonlar */
     .buttons {
       display: grid;
-      grid-template-columns: repeat (auto-fit, minmax (120 px, 1 fr));
-      gap: 1 rem;
-      margin-top: 2 rem;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
     }
 
     .donate-btn {
-      padding: 1 rem;
+      padding: 1rem;
       border: none;
-      border-radius: 8 px;
+      border-radius: 8px;
       background: #2196F3;
       color: white;
       font-weight: 600;
       cursor: pointer;
-      transition: transform 0.2 s;
+      transition: transform 0.2s;
     }
 
     .donate-btn:hover {
-      transform: translateY (-2 px);
+      transform: translateY(-2px);
     }
 
     /* Geri Sayım */
     .countdown {
       text-align: center;
-      margin-top: 2 rem;
-      font-size: 1.2 rem;
+      margin-top: 2rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -99,31 +97,31 @@
     <div class="buttons">
       <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
         <input type="hidden" name="action" value="checkout">
-        <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J+MF1ugsADDHD2A5Zh0tNFahkFSrI6PDvCMu8Y50IAaALSBMzaa2hDLfb9SfaH++g1QnK2WiHuF/4hz3yxn5WTqccr0RtbtQVzD53dOJMAL4qZUxSj6KidsLF6htRomv3kimX7rKSYvdByjqWNLDnb0fHAUXvqJgOMkHe46+JzuWj1dritagOHsqfonn24RcOUuxA7I2+0e8MEc7JEVlxnaeo9KhfU2m4nTGGIvwKykRb7pihZEXiTBpIGVHQu3dUaKTRTFG60oPpB6eNm+57GnofY77AUKX0frfLG78xxzFh4BH4DditmV5AQYLlmcGEU9Y40kcddN/Kyemvrtt+xZa+6bqf+sXwhPyYPtF74m9GPmkWJ2f4ftjPI43YMT2s+PHFMDLhrNDpd6c6AiY3HQ0Fq7BBfcsIEpStzdSXAu3XWTS6xU07cU4bZnHSvFbxzJmFQjcvjpBQAH2D4a3i8MHf3u51F6Zzd0X/5trjKeZ0ZFdgt/x425BalyFQGDBa0=" />
+        <input type="hidden" name="data" value="YOUR_DATA_HERE">
         <button type="submit" class="donate-btn">$5</button>
       </form>
 
       <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
         <input type="hidden" name="action" value="checkout">
-        <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiSYbcaH19+OkRJq6qwmB4EfpH+HaRANf9CmTUyVSMtJ8Zl0yIgsQNTqwoC6Xaax9wj/vBR6pMeX88E3/JQtw9qUaIn0mko5nZAUpH0YdUmS1wa4pkPlhILPghECel5/+oLlFTx+RFdGqVIPyXRoCcOVDK8xgMaVug68YoeJv5hAI/mmZ+4WSpT0tqTOfuYqvR4Im+v0+rpriRuymWnnf2yHLxT2s+Gjdi3uXYE2lyomeE1rEwbLE4N3LYcYVfZCv0VI3OdgdaHC533vFwAr19Xs38ZaLbTOObOLSmGSQ+GIRlKGX0RVAUupozoEau3APTVJgqIi0lzFksrD5GgJDUtp2/qURARtpQR3EPc0NVefvMJWRZ85Ymvzb3TH8jRC07sqd8bQiaKmlSfECd4v9GL48ZQgLUCnY/gCPT/VsaE3atNhACwRqUYxjVlg8p/Ssad/yVyhl+iADXzjCWXIyH+EB/Y9RP7xCt6cyuAePcrDU=" />
+        <input type="hidden" name="data" value="YOUR_DATA_HERE">
         <button type="submit" class="donate-btn">$10</button>
       </form>
 
       <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
         <input type="hidden" name="action" value="checkout">
-        <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J94SF7uI3u9v1O+swJMtY4g+9aI4uJHnJV+R+B+VuOclDTOL/xndWozYKIFDUZJ12qjMefh/NvywdAbyp5IEyIELXvO7jfq01hcL8sw2DTzPqHZ7J5/NdNoQ+RkOngTWH8cJqYJ82BfiU13bBJ0ZGxvT1JRqV9GzTrvmnc/U8mVKouK0eadyRVdyIFZaLvFbTCUR7y4v8bVac8rVWXaPxU3r8Qs4NX+jKeyPfRHq9a8GQ2X6GlQjDi8ZtCBNBNfK598hEKLWpaMAI2DDatvgl6O+nn2cU5lLVEm+HP3rADKk1DtsLYpfuKA2Uq846sfcdqvRv8nxtG7sGJltgzwa8ZrlTICSl6bMCMnXbccvBN8fuMZjao0hHNAZ4RrCYUD1awqstLMkXdC40hmrAuTBleZLe480zmUIfKo5ocGNex06DqqZsfbskPkLgCKKKnID20bJaTfjzm1USMjgoTyfUHWCI4i7IsnwtFMW8sqK75LujtTChUULeassax0fr5Kavc=" />
+        <input type="hidden" name="data" value="YOUR_DATA_HERE">
         <button type="submit" class="donate-btn">$50</button>
       </form>
 
       <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
         <input type="hidden" name="action" value="checkout">
-        <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiEyApxHF1ettCiofZrR85KR6IXiE7N/6X8n24sr1ONoEfFjYUb5w+lKPWfwi6SL+B0uoMgFKo2dZdoHR46PGzaQi36q82gEnXa7zQs2pYFx1LttZtt3mB8F5THYFOZIxryXPR8S+hEwx26F2gUK00TGClPPD1zYILQupWg7aKy8qIob539KenuHJDtZyDBDR4HXLlsrZD8hTEnoHpuq2gFvoE24p/Jem5XxWGvFikkDt9jcQJ+RPfvLbMPNWuwON4o1TlzSBLJwcHSXMhGzAqvRIBP+uASvcce5NiwWqtZ0VALAnZnyA87qNbc2wczgijI22b1K5Clq8BB2E2El+KVLjVrwr1k2e/QAuHlemeH3PxYitWXJQbdBhGUywF3XS5qyVy4CVAgG5hsiKWa+jSL/GGoFB+gtsxUjZ9zbQZM0Ol63qxECvXveK1vlW+q+dssktI+xPqvdHzz56i1InmG3A/ehedu1ohuYES7mJN6Ss=" />
+        <input type="hidden" name="data" value="YOUR_DATA_HERE">
         <button type="submit" class="donate-btn">$100</button>
       </form>
 
       <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
         <input type="hidden" name="action" value="checkout">
-        <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7Arf5LOhpVd3CGrlP5lXF5xDVygJ7QIhUFag7hO3taZ3ck=" />
+        <input type="hidden" name="data" value="YOUR_DATA_HERE">
         <button type="submit" class="donate-btn">$1000</button>
       </form>
     </div>
@@ -135,28 +133,27 @@
 
   <script>
     // Temel Fonksiyonlar
-    /function updateProgress(current = 0, goal = 250000) {
-      "const progress = (current / goal) * 100;
+    function updateProgress(current = 0, goal = 250000) {
+      const progress = (current / goal) * 100;
       document.querySelector('.progress-bar').style.width = `${progress}%`;
     }
 
-    /function startCountdown(days = 120) {
-      "let remaining = days;
-      "const countdownElement = document.getElementById('days');
+    function startCountdown(days = 120) {
+      let remaining = days;
+      const countdownElement = document.getElementById('days');
       
-      setInterval(() => {
+      setInterval(function() {
         remaining--;
-        "if(remaining >= 0) {
-          countdownElement.textContent = remaining;
+        countdownElement.textContent = remaining + " Days Left";
+        if (remaining <= 0) {
+          clearInterval(this);
         }
-      }, 86400000); // Her gün güncelle
+      }, 86400000); // Update every day (86400000 ms = 1 day)
     }
 
-    // Sayfa Yüklendiğinde
-    window.addEventListener('DOMContentLoaded', () => {
-      "updateProgress();
-      "startCountdown();
-    });
+    // Initialize progress and countdown
+    updateProgress(5000); // Example for initial progress at 5000 USD
+    startCountdown();
   </script>
 </body>
 </html>
