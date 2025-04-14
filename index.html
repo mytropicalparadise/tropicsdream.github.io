@@ -1,235 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help Fund My Tropical Paradise Bar</title>
-  <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Temel */
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    /* Body Stili */
-    body {
-      font-family: 'Inter', sans-serif;
-      background: url('https://images.unsplash.com/photo-1501594907356-8815b1e3ca34?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fHRyb3BpY2FsfGVufDB8fHx8fDE2Nzk0MjYyMzA&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
-      background-size: cover;
-      color: #fefefe;
-      height: 100 vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20 px;
-      text-align: center;
-    }
-    
-    /* Konteyner */
-    .container {
-      background: rgba (0, 0, 0, 0.65);
-      border-radius: 15 px;
-      padding: 40 px;
-      max-width: 1000 px;
-      width: 100 %;
-      box-shadow: 0 8 px 16 px rgba (0,0,0,0.5);
-      animation: fadeIn 1 s ease-in-out forwards;
-    }
-    
-    keyframes fadeIn {
-      -from { opacity: 0; transform: translateY (20 px); }
-      -to { opacity: 1; transform: translateY (0); }
-    }
-    
-    /* Logo */
-    .logo {
-      width: 150 px;
-      margin-bottom: 20 px;
-      animation: slideDown 1 s ease-out forwards;
-    }
-    keyframes slideDown {
-      -from { opacity: 0; transform: translateY (-20 px); }
-      -to { opacity: 1; transform: translateY (0); }
-    }
-    
-    /* Header */
-    header h1 {
-      font-size: 3 rem;
-      letter-spacing: 3 px;
-      margin-bottom: 20 px;
-      color: #ffd700; /* Altın Sarısı */
-      text-transform: uppercase;
-    }
-    
-    header p {
-      font-size: 1.2 rem;
-      line-height: 1.6;
-      margin-bottom: 30 px;
-      color: #f1e7b7;
-      max-width: 800 px;
-      margin: 0 auto 30 px;
-    }
-    
-    /* Progress Bar */
-    .progress {
-      height: 30 px;
-      background: rgba (255,255,255,0.2);
-      border-radius: 15 px;
-      margin: 20 px 0;
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 100 %;
-      background: #4caf50;
-      width: 20 %; /* Örnek: %20 ilerleme */
-      border-radius: 15 px;
-      transition: width 0.5 s ease;
-    }
-    
-    /* Donation Buttons */
-    .donation-buttons {
-      margin-top: 30 px;
-    }
-    .donation-buttons h2 {
-      font-size: 2 rem;
-      margin-bottom: 20 px;
-      color: #ffd700;
-      text-transform: uppercase;
-      letter-spacing: 1 px;
-    }
-    .buttons-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20 px;
-    }
-    .donate-btn {
-      background-color: #2196f3;
-      padding: 1 rem 2 rem;
-      font-size: 1.2 rem;
-      border: none;
-      border-radius: 10 px;
-      cursor: pointer;
-      transition: transform 0.3 s ease, background-color 0.3 s;
-      text-transform: uppercase;
-      letter-spacing: 1 px;
-    }
-    .donate-btn:hover {
-      background-color: #1976d2;
-      transform: translateY (-4 px);
-    }
-    
-    /* Countdown (Opsiyonel) */
-    .countdown {
-      font-size: 1.5 rem;
-      margin-top: 30 px;
-      color: #ffd700;
-      font-weight: 600;
-    }
-    
-    /* Footer */
-    footer {
-      margin-top: 30 px;
-      font-size: 1 rem;
-      color: #f1e7b7;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tropical Paradise Bar Funding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2F80ED;
+            --background: rgba (0, 0, 0, 0.85);
+            --text: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100 vh;
+            background: 
+                linear-gradient (rgba (0, 0, 0, 0.7), 
+                url('https://i.postimg.cc/8cJ292n0/Flux-Dev-I-will-make-a-background-for-my-site-I-want-a-very-ni-0-1.jpg') center/cover fixed;
+            color: var (--text);
+            padding: 2 rem;
+        }
+
+        .container {
+            max-width: 1200 px;
+            margin: 0 auto;
+            background: var (--background);
+            border-radius: 15 px;
+            padding: 2 rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5 rem;
+            margin-bottom: 1.5 rem;
+            color: #FFD700;
+        }
+
+        .progress-bar-container {
+            height: 20 px;
+            background: rgba (255, 255, 255, 0.2);
+            border-radius: 10 px;
+            margin: 2 rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100 %;
+            background: var (--primary);
+            width: 0 %;
+            transition: width 0.5 s ease;
+        }
+
+        .donation-buttons {
+            display: grid;
+            grid-template-columns: repeat (auto-fit, minmax (120 px, 1 fr));
+            gap: 1 rem;
+            margin: 2 rem 0;
+        }
+
+        .donate-btn {
+            padding: 1 rem;
+            border: none;
+            border-radius: 8 px;
+            background: var (--primary);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2 s;
+        }
+
+        .donate-btn:hover {
+            transform: translateY (-2 px);
+        }
+
+        .countdown {
+            font-size: 1.2 rem;
+            margin-top: 1.5 rem;
+        }
+
+        @media (max-width: 768 px) {
+            body {
+                padding: 1 rem;
+            }
+            
+            .container {
+                padding: 1 rem;
+            }
+            
+            h1 {
+                font-size: 2 rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Arka Plan Müziği -->
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
-    Your browser does not support audio.
-  </audio>
-  
-  <div class="container">
-    <header>
-      <!-- Logo: Kendi logo URL'nizle değiştirin -->
-      <img class="logo" src="https://via.placeholder.com/150.png?text=LOGO" alt="Logo">
-      <h1>Help Fund My Tropical Bar</h1>
-      <p>
-        Welcome to our tropical oasis! We're on a mission to build the ultimate bar on a beautiful island,
-        where each sunset is a celebration and every cocktail tells a story. Your crypto donations will transform
-        this dream into a vibrant reality. Every contribution, big or small, is a step toward creating a haven of
-        relaxation, joy, and inspiration.
-      </p>
-    </header>
-    
-    <!-- Progress Bar -->
-    <div class="progress">
-      <div class="progress-bar"></div>
+    <div class="container">
+        <h1>Fund My Tropical Bar</h1>
+        
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="donation-buttons">
+            <!-- Coinpayment Butonları -->
+            <form method="post" action="https://a-api.coinpayments.net/api/v1/invoices/button">
+                <input type="hidden" name="action" value="checkout">
+                <input type="hidden" name="data" value="YOUR_API_KEY_5USD">
+                <button type="submit" class="donate-btn">$5</button>
+            </form>
+
+            <!-- Diğer butonlar buraya -->
+        </div>
+
+        <div class="countdown" id="countdown">
+            120 Days Left
+        </div>
     </div>
-    
-    <!-- Donation Buttons -->
-    <section class="donation-buttons">
-      <h2>Make a Donation</h2>
-      <div class="buttons-container">
-        <!-- $5 Donation -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-          <input type="hidden" name="action" value="checkout">
-          <input type="hidden" name="data" value="DATA_FOR_5_USD">
-          <button type="submit" class="donate-btn">$5 USD</button>
-        </form>
-        <!-- $10 Donation -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-          <input type="hidden" name="action" value="checkout">
-          <input type="hidden" name="data" value="DATA_FOR_10_USD">
-          <button type="submit" class="donate-btn">$10 USD</button>
-        </form>
-        <!-- $50 Donation -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-          <input type="hidden" name="action" value="checkout">
-          <input type="hidden" name="data" value="DATA_FOR_50_USD">
-          <button type="submit" class="donate-btn">$50 USD</button>
-        </form>
-        <!-- $100 Donation -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-          <input type="hidden" name="action" value="checkout">
-          <input type="hidden" name="data" value="DATA_FOR_100_USD">
-          <button type="submit" class="donate-btn">$100 USD</button>
-        </form>
-        <!-- $1000 Donation -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-          <input type="hidden" name="action" value="checkout">
-          <input type="hidden" name="data" value="DATA_FOR_1000_USD">
-          <button type="submit" class="donate-btn">$1000 USD</button>
-        </form>
-      </div>
-    </section>
-    
-    <!-- Countdown (Opsiyonel, Kaldırabilirsiniz) -->
-    <div class="countdown">
-      <span id="days">120</span> Days Left
-    </div>
-    
-    <footer>
-      <p>Thank you for your support!</p>
-    </footer>
-  </div>
-  
-  <script>
-    // Örnek: Progress Bar'ı güncelle (örneğin, toplam 50.000 USD toplandığında)
-    /function updateProgress(current = 50000, goal = 250000) {
-      constprogress = (current / goal) * 100;
-      document.querySelector('.progress-bar').style.width = progress + '%';
-    }
-    updateProgress();
-    
-    // Countdown: Gün sayısını her gün bir azaltır (gerçek zamanlı sayım için server-side entegrasyon gerekir)
-    /function startCountdown(days = 120) {
-      letremaining = days;
-      constcountdownElement = document.getElementById('days');
-      setInterval(() => {
-        /if (remaining > 0) {
-          remaining--;
-          countdownElement.textContent = remaining;
+
+    <script>
+        // Progress Bar Güncelleme
+        functionupdateProgress(current = 0, goal = 250000) {
+            constprogress = (current / goal) * 100;
+            document.getElementById('progressBar').style.width = `${progress}%`;
         }
-      }, 86400000);
-    }
-    startCountdown();
-  </script>
+
+        // Geri Sayım
+        letdaysLeft = 120;
+        constcountdownElement = document.getElementById('countdown');
+        
+        functionupdateCountdown() {
+            countdownElement.textContent = `${daysLeft} Days Left`;
+            daysLeft--;
+        }
+        
+        setInterval(updateCountdown, 86400000);
+
+        // İlk Yükleme
+        window.addEventListener('DOMContentLoaded', () => {
+            updateProgress();
+            updateCountdown();
+        });
+    </script>
 </body>
 </html>
