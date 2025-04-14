@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help Fund My Tropical Paradise Bar!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f8ff;
-      margin: 0;
-      padding: 50px;
-    }
-    h1 {
-      color: #2f8f81;
-    }
-    p {
-      color: #555;
-      font-size: 18px;
-    }
-    .goal {
-      font-size: 24px;
-      color: #ff6347;
-    }
-    .crypto {
-      font-size: 20px;
-      color: #2f8f81;
-    }
-    .donation-container {
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Fund My Tropical Paradise Bar!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        h2 {
+            color: #ff6600;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container form {
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Help Fund My Tropical Paradise Bar!</h1>
-  <p>Support my dream of opening a bar on a tropical island with crypto donations!</p>
-  
-  <div class="goal">
-    <p>My goal is to raise $250,000 to make this dream come true!</p>
-  </div>
-  
-  <div class="crypto">
-    <p>Donation Methods:</p>
-    <p>ETH, BTC, LTC, XRP, USDT</p>
-  </div>
-  
-  <div class="donation-container">
-    <p>Donate now and be part of my tropical bar adventure!</p>
-    <!-- You can add a cryptocurrency donation widget here in the future -->
-  </div>
-  
+    <h1>Help Fund My Tropical Paradise Bar!</h1>
+    <h2>Support my dream of opening a bar on a tropical island with crypto donations!</h2>
+    
+    <div class="button-container">
+        <!-- 5 USD Button -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiSYbcaH19+OkRJq6qwmB4EfpH+HaRANf9CmTUyVSMtJ8Zl0yIgsQNTqwoC6Xaax9wj/vBR6pMeX88E3/JQtw9qUaIn0mko5nZAUpH0YdUmS1wa4pkPlhILPghECel5/+oLlFTx+RFdGqVIPyXRoCcOVDK8xgMaVug68YoeJv5hAI/mmZ+4WSpT0tqTOfuYqvR4Im+v0+rpriRuymWnnf2yHLxT2s+Gjdi3uXYE2lyomeE1rEwbLE4N3LYcYVfZCv0VI3OdgdaHC533vFwAr19Xs38ZaLbTOObOLSmGSQ+GIRlKGX0RVAUupozoEau3APTVJgqIi0lzFksrD5GgJDUtp2/qURARtpQR3EPc0NVefvMJWRZ85Ymvzb3TH8jRC07sqd8bQiaKmlSfECd4v9GL48ZQgLUCnY/gCPT/VsaE3atNhACwRqUYxjVlg8p/SsakLVmQrxFq13xUXpgkFbDsEhQ1Tg9h67zXca28p4zGh4=" />
+            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Buy Now with CoinPayments.net">
+        </form>
+
+        <!-- 10 USD Button -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7ArcLqUy8FXcN19yBXLsFRZz8LcKclQetfcTnU8JpHVtBw=" />
+            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Buy Now with CoinPayments.net">
+        </form>
+
+        <!-- 50 USD Button -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7ArcLqUy8FXcN19yBXLsFRZz8LcKclQetfcTnU8JpHVtBw=" />
+            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Buy Now with CoinPayments.net">
+        </form>
+
+        <!-- 100 USD Button -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7ArcLqUy8FXcN19yBXLsFRZz8LcKclQetfcTnU8JpHVtBw=" />
+            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Buy Now with CoinPayments.net">
+        </form>
+
+        <!-- 1000 USD Button -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+            <input type="hidden" name="action" value="checkout" />
+            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7ArcLqUy8FXcN19yBXLsFRZz8LcKclQetfcTnU8JpHVtBw=" />
+            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Buy Now with CoinPayments.net">
+        </form>
+    </div>
 </body>
 </html>
