@@ -19,7 +19,10 @@
       align-items: center;
       text-align: center;
     }
-    .logo { width: 150px; margin: 20px auto; }
+    .logo { 
+      width: 180px; /* Logo boyutu büyütüldü */
+      margin: 20px auto; 
+    }
     .container {
       background: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
@@ -69,7 +72,7 @@
     }
     .donation-buttons h2 { 
       font-size: 2rem; 
-      margin-bottom: 30px; /* Başlık ile buton arası boşluk artırıldı */
+      margin-bottom: 30px;
     }
     .buttons-container {
       display: flex;
@@ -127,13 +130,27 @@
       font-family: 'Pacifico', cursive; 
       font-size: 1.2rem;
     }
+    #music-toggle { 
+      position: fixed; 
+      top: 10px; 
+      right: 10px; 
+      z-index: 1000;
+      padding: 8px 15px;
+      background: #000; /* Siyah arkaplan */
+      color: #fff; /* Beyaz yazı */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
   </style>
 </head>
 <body>
-  <audio loop id="bg-music">
+  <audio loop id="bg-music" autoplay>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
   </audio>
-  <button id="music-toggle">♫ Play Music</button>
+  <button id="music-toggle">♫ Pause Music</button>
 
   <img src="https://i.postimg.cc/xTMybPCL/Ekran-Al-nt-s-removebg-preview.png" alt="Logo" class="logo">
   
@@ -181,20 +198,31 @@
     // Müzik Kontrolü
     const music = document.getElementById('bg-music');
     const musicToggle = document.getElementById('music-toggle');
-    let isPlaying = false;
+    let isPlaying = true;
     
+    // Otomatik başlatma için tarayıcı uyumluluğu
+    document.addEventListener('click', () => {
+      music.play().catch(() => {});
+    }, { once: true });
+
     musicToggle.addEventListener('click', () => {
       isPlaying = !isPlaying;
       isPlaying ? music.play() : music.pause();
       musicToggle.textContent = isPlaying ? '♫ Pause Music' : '♫ Play Music';
     });
 
-    // Geri Sayım (Bugünden 120 gün sonra)
+    // Kalıcı Geri Sayım Sistemi
+    let countdownEnd = localStorage.getItem('countdownEnd');
+    if (!countdownEnd) {
+      countdownEnd = Date.now() + (120 * 86400000);
+      localStorage.setItem('countdownEnd', countdownEnd);
+    } else {
+      countdownEnd = Number(countdownEnd);
+    }
+
     const countdownElement = document.getElementById('countdown-clock');
-    const countdownEnd = new Date().getTime() + (120 * 86400000);
-    
     setInterval(() => {
-      const now = new Date().getTime();
+      const now = Date.now();
       const distance = countdownEnd - now;
       const days = Math.floor(distance / 86400000);
       const hours = Math.floor((distance % 86400000) / 3600000);
@@ -202,8 +230,10 @@
       const seconds = Math.floor((distance % 60000) / 1000);
       
       countdownElement.textContent = 
-        `${days.toString().padStart(2, '0')}d ${hours.toString().padStart(2, '0')}h ` +
-        `${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
+        `${days.toString().padStart(2, '0')}d ` +
+        `${hours.toString().padStart(2, '0')}h ` +
+        `${minutes.toString().padStart(2, '0')}m ` +
+        `${seconds.toString().padStart(2, '0')}s`;
     }, 1000);
 
     // Cüzdan Fonksiyonları
@@ -211,7 +241,7 @@
       BTC: "1FhKcGuxiTVhCoj5kPZ63LnYDCvjRqgv7F",
       USDT: "YOUR_USDT_ADDRESS",
       ETH: "YOUR_ETH_ADDRESS",
-      LTC: "LYbBuwEC9R8Hy1Qk2X7mW78G7C5iBTXSkY",
+      LTC: "YOUR_LTC_ADDRESS",
       BNB: "YOUR_BNB_ADDRESS"
     };
 
@@ -229,7 +259,7 @@
         .catch(() => alert("Failed to copy!"));
     }
 
-    // Progress Bar Güncelleme
+    // Progress Bar
     function updateProgress(current = 0, goal = 250000) {
       const progress = (current/goal)*100;
       document.querySelector('.progress-bar').style.width = `${progress}%`;
