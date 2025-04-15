@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help Fund My Tropical Paradise Bar</title>
-  <!-- Google Font: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Montserrat and Pacifico -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     /* Reset */
     *, *::before, *::after {
@@ -13,89 +13,99 @@
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* Body: Arka plan, genel renk, ve temel düzen */
+    /* Body */
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background: url('https://images.unsplash.com/photo-1501594907356-8815b1e3ca34?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fHRyb3BpY2FsfGVufDB8fHx8fDE2Nzk0MjYyMzA&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
       background-size: cover;
       color: #fefefe;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      position: relative;
     }
-
-    /* İçerik Konteyneri */
+    /* Logo */
+    .logo {
+      width: 150px;
+      margin: 20px auto;
+    }
+    /* Container: %50 transparan siyah çerçeve */
     .container {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
       padding: 40px;
       max-width: 900px;
       width: 100%;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
       animation: fadeIn 1s ease-in-out forwards;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /* Logo */
-    .logo {
-      width: 150px;
-      margin-bottom: 20px;
-      animation: slideDown 1s ease-out forwards;
-    }
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Başlık ve Açıklama */
+    /* Header */
     header h1 {
       font-size: 3rem;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-      color: #FFD700; /* Altın sarısı */
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
       text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
     header p {
       font-size: 1.2rem;
       line-height: 1.6;
+      color: rgba(255,255,255,0.7);
       margin-bottom: 30px;
-      color: #FFDD99;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 30px;
     }
-
-    /* Progress Bar (Opsiyonel) */
+    /* Donation Total (üstünde progress bar) */
+    .donation-total {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    /* Progress Bar */
     .progress {
       height: 30px;
-      background: rgba(255,255,255,0.2);
+      background: #000; /* Siyah arka plan */
       border-radius: 15px;
-      margin: 20px 0;
+      margin: 10px 0;
+      position: relative;
       overflow: hidden;
     }
     .progress-bar {
       height: 100%;
-      background: #4CAF50;
-      width: 20%; /* Örnek: %20 tamamlandı */
+      background: #fff; /* Beyaz dolum */
+      width: 20%; /* Örnek: %20 doluluk */
       border-radius: 15px;
       transition: width 0.5s ease;
+      position: relative;
     }
-
-    /* Donation Buttons */
+    .progress-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      font-weight: bold;
+      color: #4CAF50; /* Yeşil yüzde yazısı */
+    }
+    /* Donation Buttons Section */
     .donation-buttons {
       margin-top: 30px;
     }
     .donation-buttons h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #FFD700;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -106,87 +116,99 @@
       gap: 20px;
     }
     .donate-btn {
-      background-color: #2196F3;
+      background-color: #000; /* Siyah buton */
       padding: 1rem 2rem;
       font-size: 1.2rem;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: transform 0.3s ease, background-color 0.3s;
-      color: #fff;
       text-transform: uppercase;
       letter-spacing: 1px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
+      color: grey; /* Buton içindeki yazı gri */
     }
     .donate-btn:hover {
-      background-color: #1976D2;
+      background-color: #333;
       transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.7);
     }
-
-    /* Countdown (Opsiyonel) */
+    /* Countdown Clock */
     .countdown {
       font-size: 1.5rem;
       margin-top: 30px;
-      color: #FFD700;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       font-weight: 600;
     }
-
     /* Footer */
     footer {
       margin-top: 30px;
-      font-size: 1rem;
-      color: #FFDD99;
+      font-size: 1.2rem;
+      color: white;
+      font-family: 'Pacifico', cursive;
     }
   </style>
 </head>
 <body>
-  <!-- Arka Plan Müziği (Yavaş ve rahatlatıcı bir parça) -->
-  <audio autoplay loop>
+  <!-- Arka Plan Müziği: Yavaş, %50 ses seviyesi -->
+  <audio autoplay loop id="bg-music">
     <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   
+  <!-- Logo: Üstte ortalanmış -->
+  <img src="https://via.placeholder.com/150.png?text=LOGO" alt="Logo" class="logo">
+  
   <div class="container">
     <header>
-      <!-- Kendi logonuzun URL'sini aşağıdaki src'ye ekleyin -->
-      <img class="logo" src="https://via.placeholder.com/150.png?text=LOGO" alt="Logo">
       <h1>Help Fund My Tropical Bar</h1>
       <p>
-        Welcome to our tropical oasis! We're on a mission to create the ultimate bar experience on a beautiful island.
-        Your crypto donations will help us transform dreams into reality – from stunning architecture to signature cocktails,
-        and everything in between. Every contribution brings us one step closer to paradise.
+        Welcome to our tropical oasis! We're on a mission to create the ultimate bar experience on a breathtaking island.
+        Your crypto donations help turn dreams into reality – from stylish design to signature cocktails.
+        Every contribution makes a difference and brings us closer to paradise.
       </p>
     </header>
     
-    <!-- Progress Bar (Opsiyonel) -->
+    <!-- Toplam Bağış Bilgisi -->
+    <div class="donation-total">0 / 250,000 USD</div>
+    
+    <!-- Progress Bar -->
     <div class="progress">
-      <div class="progress-bar"></div>
+      <div class="progress-bar">
+        <span class="progress-text">20%</span>
+      </div>
     </div>
     
     <!-- Donation Buttons -->
     <section class="donation-buttons">
       <h2>Make a Donation</h2>
       <div class="buttons-container">
-        <!-- Her buton için CoinPayments API verisini kendi değerlerinizle değiştirin -->
+        <!-- $5 Donation -->
         <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
           <input type="hidden" name="action" value="checkout">
           <input type="hidden" name="data" value="DATA_FOR_5_USD">
           <button type="submit" class="donate-btn">$5 USD</button>
         </form>
+        <!-- $10 Donation -->
         <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
           <input type="hidden" name="action" value="checkout">
           <input type="hidden" name="data" value="DATA_FOR_10_USD">
           <button type="submit" class="donate-btn">$10 USD</button>
         </form>
+        <!-- $50 Donation -->
         <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
           <input type="hidden" name="action" value="checkout">
           <input type="hidden" name="data" value="DATA_FOR_50_USD">
           <button type="submit" class="donate-btn">$50 USD</button>
         </form>
+        <!-- $100 Donation -->
         <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
           <input type="hidden" name="action" value="checkout">
           <input type="hidden" name="data" value="DATA_FOR_100_USD">
           <button type="submit" class="donate-btn">$100 USD</button>
         </form>
+        <!-- $1000 Donation -->
         <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
           <input type="hidden" name="action" value="checkout">
           <input type="hidden" name="data" value="DATA_FOR_1000_USD">
@@ -195,36 +217,61 @@
       </div>
     </section>
     
-    <!-- Countdown (Opsiyonel) -->
-    <div class="countdown">
-      <span id="days">120</span> Days Left
+    <!-- Countdown Clock: Geri sayım saati (saat, dakika, saniye) -->
+    <div class="countdown" id="countdown-clock">
+      00d 00h 00m 00s
     </div>
     
     <footer>
-      <p>Thank you for your support!</p>
+      Thank you for your support!
     </footer>
   </div>
   
   <script>
-    // Örnek: Progress Bar'ı güncelle (örneğin, 50,000 USD toplandı)
+    // Arka plan müziği sesini %50 yap
+    document.getElementById('bg-music').volume = 0.5;
+    
+    // Progress Bar Fonksiyonu: Örnek güncelleme
     function updateProgress(current = 50000, goal = 250000) {
       const progress = (current / goal) * 100;
-      document.querySelector('.progress-bar').style.width = progress + '%';
+      const progressBar = document.querySelector('.progress-bar');
+      const progressText = document.querySelector('.progress-text');
+      progressBar.style.width = progress + '%';
+      progressText.textContent = Math.floor(progress) + '%';
+      // Güncel bağış toplamını güncelle
+      document.querySelector('.donation-total').textContent =
+        current.toLocaleString() + " / " + goal.toLocaleString() + " USD";
     }
     updateProgress();
-
-    // Countdown Fonksiyonu (Basit örnek)
-    function startCountdown(days = 120) {
-      let remaining = days;
-      const countdownElement = document.getElementById('days');
-      setInterval(() => {
-        if (remaining > 0) {
-          remaining--;
-          countdownElement.textContent = remaining;
+    
+    // Countdown Clock: Geri sayım saati fonksiyonu
+    function startCountdown(endTime) {
+      const countdownElement = document.getElementById('countdown-clock');
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = endTime - now;
+        if (distance < 0) {
+          countdownElement.textContent = "Time's up!";
+          clearInterval(interval);
+          return;
         }
-      }, 86400000); // Her gün güncelle (86400000 ms = 1 gün)
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        countdownElement.textContent =
+          (days < 10 ? "0" + days : days) + "d " +
+          (hours < 10 ? "0" + hours : hours) + "h " +
+          (minutes < 10 ? "0" + minutes : minutes) + "m " +
+          (seconds < 10 ? "0" + seconds : seconds) + "s";
+      }
+      updateCountdown();
+      var interval = setInterval(updateCountdown, 1000);
     }
-    startCountdown();
+    // 120 gün sonra bitiş zamanını ayarla
+    const now = new Date().getTime();
+    const countdownEnd = now + (120 * 24 * 60 * 60 * 1000);
+    startCountdown(countdownEnd);
   </script>
 </body>
 </html>
