@@ -273,40 +273,26 @@
 
     // Wallet Functions
     const walletAddresses = {
-    BTC: "1FhKcGuxiTVhCoj5kPZ63LnYDCvjRqgv7F",
-    USDT: "TXAevYokyEc7HjQuUCyexc61z4se6X8HG7",
-    ETH: "0xaeff3e724a7e0d933eb48961976ba6464176605a",
-    LTC: "LYbBuwEC9R8Hy1Qk2X7mW78G7C5iBTXSkY",
-    BNB: "0xaeff3e724a7e0d933eb48961976ba6464176605a"
-  };
+      BTC: "1FhKcGuxiTVhCoj5kPZ63LnYDCvjRqgv7F",
+      USDT: "TXAevYokyEc7HjQuUCyexc61z4se6X8HG7",
+      ETH: "0xaeff3e724a7e0d933eb48961976ba6464176605a",
+      LTC: "LYbBuwEC9R8Hy1Qk2X7mW78G7C5iBTXSkY",
+      BNB: "0xaeff3e724a7e0d933eb48961976ba6464176605a"
+    };
 
-  // Son tıklanan coin bilgisini saklayan değişken
-  let currentCoin = null;
-
-  function showWallet(coin) {
-    const walletInfo = document.getElementById('wallet-info');
-
-    // Eğer aynı butona yeniden tıklanırsa, açılan kısmı kapat
-    if (currentCoin === coin && walletInfo.style.display === "flex") {
-      walletInfo.style.display = "none";
-      currentCoin = null;
-    } else {
-      // Farklı coin seçildiyse veya ilk kez açılıyorsa,
-      // ilgili coin bilgisini güncelle
-      currentCoin = coin;
+    function showWallet(coin) {
       const address = walletAddresses[coin];
       document.getElementById('wallet-qr').src = 
         `https://api.qrserver.com/v1/create-qr-code/?data=${address}&size=180x180&bgcolor=ffffff00`;
       document.getElementById('wallet-address').textContent = address;
-      walletInfo.style.display = "flex";
+      document.getElementById('wallet-info').style.display = "flex";
     }
-  }
 
-  function copyAddress() {
-    navigator.clipboard.writeText(document.getElementById('wallet-address').textContent)
-      .then(() => alert("Address copied to clipboard!"))
-      .catch(() => alert("Failed to copy!"));
-  }
+    function copyAddress() {
+      navigator.clipboard.writeText(document.getElementById('wallet-address').textContent)
+        .then(() => alert("Address copied to clipboard!"))
+        .catch(() => alert("Failed to copy!"));
+    }
 
     // Progress Bar Update
     function updateProgress(current = 0, goal = 250000) {
