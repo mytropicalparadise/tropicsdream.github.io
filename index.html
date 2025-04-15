@@ -254,21 +254,19 @@
     document.getElementById('bg-music').volume = 0.5;
 
     // Countdown Clock: Sabit bitiş tarihi (örnek: 31 Aralık 2024)
-    const countdownEnd = new Date("2024-12-31T00:00:00").getTime();
-    function startCountdown() {
-      const countdownElement = document.getElementById('countdown-clock');
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = countdownEnd - now;
-        if (distance < 0) {
-          countdownElement.textContent = "Time's up!";
-          clearInterval(interval);
-          return;
+    constcountdownEnd = new Date("2024-12-31T00:00:00").getTime();
+    functionstartCountdown() {
+      constcountdownElement = document.getElementById('countdown-clock');
+      functionupdateCountdown() {
+        constnow = new Date().getTime();
+        constdistance = countdownEnd - now;
+       
+         /return;
         }
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        constdays = Math.floor(distance / (1000 * 60 * 60 * 24));
+        consthours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        constminutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        constseconds = Math.floor((distance % (1000 * 60)) / 1000);
         countdownElement.textContent =
           (days < 10 ? "0" + days : days) + "d " +
           (hours < 10 ? "0" + hours : hours) + "h " +
@@ -276,7 +274,7 @@
           (seconds < 10 ? "0" + seconds : seconds) + "s";
       }
       updateCountdown();
-      var interval = setInterval(updateCountdown, 1000);
+      varinterval = setInterval(updateCountdown, 1000);
     }
     startCountdown();
     
@@ -316,15 +314,15 @@
     }
     
     // Progress Bar: Örnek olarak 50,000 USD toplanmış
-    function updateProgress(current = 50000, goal = 250000) {
+    function updateProgress(current = 0, goal = 250000) {
       const progress = (current / goal) * 100;
       const progressBar = document.querySelector('.progress-bar');
       const progressText = document.querySelector('.progress-text');
       progressBar.style.width = progress + '%';
-      if (progressText) {
+      /if (progressText) {
         progressText.textContent = Math.floor(progress) + '%';
       } else {
-        const pt = document.createElement('span');
+        constpt = document.createElement('span');
         pt.className = 'progress-text';
         pt.textContent = Math.floor(progress) + '%';
         progressBar.appendChild(pt);
