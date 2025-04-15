@@ -1,70 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Fund My Tropical Paradise Bar!</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            background-color: #f0f8ff;
-        }
-        h1 {
-            color: #0066cc;
-        }
-        h2 {
-            color: #ff6600;
-        }
-        .button-container {
-            margin-top: 20px;
-        }
-        .button-container form {
-            display: inline-block;
-            margin: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Fund My Tropical Paradise Bar</title>
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body: Arka plan, genel renk, ve temel düzen */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: url('https://images.unsplash.com/photo-1501594907356-8815b1e3ca34?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDd8fHRyb3BpY2FsfGVufDB8fHx8fDE2Nzk0MjYyMzA&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background-size: cover;
+      color: #fefefe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* İçerik Konteyneri */
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 900px;
+      width: 100%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Logo */
+    .logo {
+      width: 150px;
+      margin-bottom: 20px;
+      animation: slideDown 1s ease-out forwards;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Başlık ve Açıklama */
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      color: #FFD700; /* Altın sarısı */
+      text-transform: uppercase;
+    }
+    header p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #FFDD99;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Progress Bar (Opsiyonel) */
+    .progress {
+      height: 30px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 15px;
+      margin: 20px 0;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background: #4CAF50;
+      width: 20%; /* Örnek: %20 tamamlandı */
+      border-radius: 15px;
+      transition: width 0.5s ease;
+    }
+
+    /* Donation Buttons */
+    .donation-buttons {
+      margin-top: 30px;
+    }
+    .donation-buttons h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #FFD700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .donate-btn {
+      background-color: #2196F3;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .donate-btn:hover {
+      background-color: #1976D2;
+      transform: translateY(-5px);
+    }
+
+    /* Countdown (Opsiyonel) */
+    .countdown {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      color: #FFD700;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #FFDD99;
+    }
+  </style>
 </head>
 <body>
-    <h1>Help Fund My Tropical Paradise Bar!</h1>
-    <h2>Support my dream of opening a bar on a tropical island with crypto donations!</h2>
+  <!-- Arka Plan Müziği (Yavaş ve rahatlatıcı bir parça) -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="container">
+    <header>
+      <!-- Kendi logonuzun URL'sini aşağıdaki src'ye ekleyin -->
+      <img class="logo" src="https://via.placeholder.com/150.png?text=LOGO" alt="Logo">
+      <h1>Help Fund My Tropical Bar</h1>
+      <p>
+        Welcome to our tropical oasis! We're on a mission to create the ultimate bar experience on a beautiful island.
+        Your crypto donations will help us transform dreams into reality – from stunning architecture to signature cocktails,
+        and everything in between. Every contribution brings us one step closer to paradise.
+      </p>
+    </header>
     
-    <div class="button-container">
-        <!-- 5 USD Button -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-            <input type="hidden" name="action" value="checkout" />
-            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J+MF1ugsADDHD2A5Zh0tNFahkFSrI6PDvCMu8Y50IAaALSBMzaa2hDLfb9SfaH++g1QnK2WiHuF/4hz3yxn5WTqccr0RtbtQVzD53dOJMAL4qZUxSj6KidsLF6htRomv3kimX7rKSYvdByjqWNLDnb0fHAUXvqJgOMkHe46+JzuWj1dritagOHsqfonn24RcOUuxA7I2+0e8MEc7JEVlxnaeo9KhfU2m4nTGGIvwKykRb7pihZEXiTBpIGVHQu3dUaKTRTFG60oPpB6eNm+57GnofY77AUKX0frfLG78xxzFh4BH4DditmV5AQYLlmcGEU9Y40kcddN/Kyemvrtt+xZa+6bqf+sXwhPyYPtF74m9GPmkWJ2f4ftjPI43YMT2s+PHFMDLhrNDpd6c6AiY3HQ0Fq7BBfcsIEpStzdSXAu3XWTS6xU07cU4bZnHSvFbxzJmFQjcvjpBQAH2D4a3i8MHf3u51F6Zzd0X/5trjKeZ0ZFdgt/x425BalyFQGDBa0=" />
-            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Donate 5$">
-        </form>
-
-        <!-- 10 USD Button -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-            <input type="hidden" name="action" value="checkout" />
-            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiSYbcaH19+OkRJq6qwmB4EfpH+HaRANf9CmTUyVSMtJ8Zl0yIgsQNTqwoC6Xaax9wj/vBR6pMeX88E3/JQtw9qUaIn0mko5nZAUpH0YdUmS1wa4pkPlhILPghECel5/+oLlFTx+RFdGqVIPyXRoCcOVDK8xgMaVug68YoeJv5hAI/mmZ+4WSpT0tqTOfuYqvR4Im+v0+rpriRuymWnnf2yHLxT2s+Gjdi3uXYE2lyomeE1rEwbLE4N3LYcYVfZCv0VI3OdgdaHC533vFwAr19Xs38ZaLbTOObOLSmGSQ+GIRlKGX0RVAUupozoEau3APTVJgqIi0lzFksrD5GgJDUtp2/qURARtpQR3EPc0NVefvMJWRZ85Ymvzb3TH8jRC07sqd8bQiaKmlSfECd4v9GL48ZQgLUCnY/gCPT/VsaE3atNhACwRqUYxjVlg8p/Ssad/yVyhl+iADXzjCWXIyH+EB/Y9RP7xCt6cyuAePcrDU=" />
-            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Donate 10$">
-        </form>
-
-        <!-- 50 USD Button -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-            <input type="hidden" name="action" value="checkout" />
-            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J94SF7uI3u9v1O+swJMtY4g+9aI4uJHnJV+R+B+VuOclDTOL/xndWozYKIFDUZJ12qjMefh/NvywdAbyp5IEyIELXvO7jfq01hcL8sw2DTzPqHZ7J5/NdNoQ+RkOngTWH8cJqYJ82BfiU13bBJ0ZGxvT1JRqV9GzTrvmnc/U8mVKouK0eadyRVdyIFZaLvFbTCUR7y4v8bVac8rVWXaPxU3r8Qs4NX+jKeyPfRHq9a8GQ2X6GlQjDi8ZtCBNBNfK598hEKLWpaMAI2DDatvgl6O+nn2cU5lLVEm+HP3rADKk1DtsLYpfuKA2Uq846sfcdqvRv8nxtG7sGJltgzwa8ZrlTICSl6bMCMnXbccvBN8fuMZjao0hHNAZ4RrCYUD1awqstLMkXdC40hmrAuTBleZLe480zmUIfKo5ocGNex06DqqZsfbskPkLgCKKKnID20bJaTfjzm1USMjgoTyfUHWCI4i7IsnwtFMW8sqK75LujtTChUULeassax0fr5Kavc=" />
-            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Donate 50$">
-        </form>
-
-        <!-- 100 USD Button -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-            <input type="hidden" name="action" value="checkout" />
-            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiEyApxHF1ettCiofZrR85KR6IXiE7N/6X8n24sr1ONoEfFjYUb5w+lKPWfwi6SL+B0uoMgFKo2dZdoHR46PGzaQi36q82gEnXa7zQs2pYFx1LttZtt3mB8F5THYFOZIxryXPR8S+hEwx26F2gUK00TGClPPD1zYILQupWg7aKy8qIob539KenuHJDtZyDBDR4HXLlsrZD8hTEnoHpuq2gFvoE24p/Jem5XxWGvFikkDt9jcQJ+RPfvLbMPNWuwON4o1TlzSBLJwcHSXMhGzAqvRIBP+uASvcce5NiwWqtZ0VALAnZnyA87qNbc2wczgijI22b1K5Clq8BB2E2El+KVLjVrwr1k2e/QAuHlemeH3PxYitWXJQbdBhGUywF3XS5qyVy4CVAgG5hsiKWa+jSL/GGoFB+gtsxUjZ9zbQZM0Ol63qxECvXveK1vlW+q+dssktI+xPqvdHzz56i1InmG3A/ehedu1ohuYES7mJN6Ss=" />
-            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Donate 100$">
-        </form>
-
-        <!-- 1000 USD Button -->
-        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
-            <input type="hidden" name="action" value="checkout" />
-            <input type="hidden" name="data" value="iCrAVn3/rgSxJVxgOF1/Srcz2sl1orZLqtc0mMCbMsyrbzJggxTmtHvoEnjv/n77CMTTUKu932T+QEFchdRSTjER+QW2I8q01vmd/1EgFmfW3pBXtnIFd+HWV7e0dcLPx3I+WnU04uto926tu0g71HEEPaDXE/7gxQsHHUv23Uk8f8N8w9RNLN2U+FIAcKiVArGeedGoexTlGIxXPqWFXNAbYtpxJNEwvK/8t3BGJ9xqATWLQPGE5amTxARLqET7nCPsr0KcWeQ3bOEAJRK7TiovDxj+KmPflS3wYdFO50K6Hs3RASVuh8/PX5O+zoVxaGGBhqfqA0iH4V+0vE1VWNsX/kK6dyBeOCQ8L3BNy3fUiwrmmU6TN7rPYVdIX5emoiIUvLyqitwodTLNDK795E9BrkGAD599hj9RAtx9NDUu64mb8t3J/0yBz78aYNpaJQeiSVR9YOTveW1/ZAEjiV162EWqTyZwWFusndlp9a+PXXZSJsRjmVEHXkrbDijNO2sef1l+n+hpvp1l/BmLT4+3mZmh3nrIckSqb0oN4J/7UxTv8Q+U+WVKieYdOrPiKal30Kb64Tws33U/+No9LdtPimSFSbbHXQ41ezhgAFlAsuB+vHXBgRbcFxTj9/ximIGOlAtSn7ko3mmHKnXrzuq4LWMod01Xnzz0/dRK/+BZLPTo5X5+bfHbkPc7YBuGtx4IuRixvTt25XJZCqE6upYhX3dHMuttOEXnWvw5PyU+Ryz+w29Q+sJSmHKM5Yv1pZDA6xxFVEOJecGkDXiOA1thAes3o42eGVwoR8wWV1r8wBF0zh3mdgANFczfkHpUjHpZOmwsI8fA4rbs/v2ro18sfH+FW53UtCmnoPZExoJtirpRWd1CU3dMqg8nDtgC4Je5gIqN9KtI+nBfilrwao51wZFQ4Py4BzMgeWmiWrG7WQ52Wm9gt6C8gEnHx+zWTndH78kQKYNHMqOWLx0/bYddUn+9yx7MtK59wLzVY7bHKE5x6KoI+yXJNMPQp7Arf5LOhpVd3CGrlP5lXF5xDVygJ7QIhUFag7hO3taZ3ck=" />
-            <input type="image" src="https://a-api.coinpayments.net/checkout_buttons/pay_blue_big.svg" name="submit" style="width: 294px" alt="Donate 1000$">
-        </form>
+    <!-- Progress Bar (Opsiyonel) -->
+    <div class="progress">
+      <div class="progress-bar"></div>
     </div>
+    
+    <!-- Donation Buttons -->
+    <section class="donation-buttons">
+      <h2>Make a Donation</h2>
+      <div class="buttons-container">
+        <!-- Her buton için CoinPayments API verisini kendi değerlerinizle değiştirin -->
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+          <input type="hidden" name="action" value="checkout">
+          <input type="hidden" name="data" value="DATA_FOR_5_USD">
+          <button type="submit" class="donate-btn">$5 USD</button>
+        </form>
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+          <input type="hidden" name="action" value="checkout">
+          <input type="hidden" name="data" value="DATA_FOR_10_USD">
+          <button type="submit" class="donate-btn">$10 USD</button>
+        </form>
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+          <input type="hidden" name="action" value="checkout">
+          <input type="hidden" name="data" value="DATA_FOR_50_USD">
+          <button type="submit" class="donate-btn">$50 USD</button>
+        </form>
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+          <input type="hidden" name="action" value="checkout">
+          <input type="hidden" name="data" value="DATA_FOR_100_USD">
+          <button type="submit" class="donate-btn">$100 USD</button>
+        </form>
+        <form action="https://a-api.coinpayments.net/api/v1/invoices/button" method="post">
+          <input type="hidden" name="action" value="checkout">
+          <input type="hidden" name="data" value="DATA_FOR_1000_USD">
+          <button type="submit" class="donate-btn">$1000 USD</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Countdown (Opsiyonel) -->
+    <div class="countdown">
+      <span id="days">120</span> Days Left
+    </div>
+    
+    <footer>
+      <p>Thank you for your support!</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Örnek: Progress Bar'ı güncelle (örneğin, 50,000 USD toplandı)
+    function updateProgress(current = 50000, goal = 250000) {
+      const progress = (current / goal) * 100;
+      document.querySelector('.progress-bar').style.width = progress + '%';
+    }
+    updateProgress();
+
+    // Countdown Fonksiyonu (Basit örnek)
+    function startCountdown(days = 120) {
+      let remaining = days;
+      const countdownElement = document.getElementById('days');
+      setInterval(() => {
+        if (remaining > 0) {
+          remaining--;
+          countdownElement.textContent = remaining;
+        }
+      }, 86400000); // Her gün güncelle (86400000 ms = 1 gün)
+    }
+    startCountdown();
+  </script>
 </body>
 </html>
