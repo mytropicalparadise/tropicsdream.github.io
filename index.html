@@ -2,8 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Mobil uyumluluk için gerekli meta etiket -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Etiketleri -->
   <title>Building a Bar With Crypto</title>
+  <meta name="description" content="Join us to build a tropical bar paradise with crypto donations. Your contribution helps transform a dream into a lively reality on a beautiful island.">
+  <meta name="keywords" content="crypto, donation, tropical bar, crowdfunding, paradise, crypto donation, island bar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mytropicalparadise.github.io/tropicsdream.github.io/">
+  
+  <!-- Open Graph Meta Etiketleri -->
+  <meta property="og:title" content="Building a Bar With Crypto">
+  <meta property="og:description" content="Join us in building a tropical paradise bar through crypto donations. Let your contribution make a dream come true on a beautiful island.">
+  <meta property="og:image" content="https://i.postimg.cc/xTMybPCL/Ekran-Al-nt-s-removebg-preview.png">
+  <meta property="og:url" content="https://mytropicalparadise.github.io/tropicsdream.github.io/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card Meta Etiketleri -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building a Bar With Crypto">
+  <meta name="twitter:description" content="Join us in building a tropical paradise bar through crypto donations. Your contribution turns dream into reality on a stunning island.">
+  <meta name="twitter:image" content="https://i.postimg.cc/xTMybPCL/Ekran-Al-nt-s-removebg-preview.png">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Building a Bar With Crypto",
+    "url": "https://mytropicalparadise.github.io/tropicsdream.github.io/",
+    "description": "Join us to build a tropical bar paradise with crypto donations. Your contribution helps transform a dream into a lively reality on a beautiful island."
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -136,8 +168,8 @@
       right: 10px; 
       z-index: 1000;
       padding: 8px 15px;
-      background: #000; /* Siyah arkaplan */
-      color: #fff; /* Beyaz yazı */
+      background: #000;
+      color: #fff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -158,7 +190,7 @@
     <header>
       <h1>Building a Bar With Crypto</h1>
       <p>
-        Let’s Build a Dream Together
+        Let’s Build a Dream Together<br>
         Imagine this: soft white sands, crystal-clear waters, a gentle ocean breeze, and a perfectly crafted tropical
         drink in hand. Now, imagine being part of the story that brings this paradise to life. I'm on a mission to build
         a bar on a beautiful tropical island—a place where good vibes, great conversations, and unforgettable
@@ -198,12 +230,12 @@
   </div>
 
   <script>
-    // Müzik Kontrolü
+    // Music Control
     const music = document.getElementById('bg-music');
     const musicToggle = document.getElementById('music-toggle');
     let isPlaying = true;
     
-    // Otomatik başlatma için tarayıcı uyumluluğu
+    // Ensure music plays on user interaction for compatibility
     document.addEventListener('click', () => {
       music.play().catch(() => {});
     }, { once: true });
@@ -214,7 +246,7 @@
       musicToggle.textContent = isPlaying ? '♫ Pause Music' : '♫ Play Music';
     });
 
-    // Kalıcı Geri Sayım Sistemi
+    // Persistent Countdown Timer
     let countdownEnd = localStorage.getItem('countdownEnd');
     if (!countdownEnd) {
       countdownEnd = Date.now() + (120 * 86400000);
@@ -239,7 +271,7 @@
         `${seconds.toString().padStart(2, '0')}s`;
     }, 1000);
 
-    // Cüzdan Fonksiyonları
+    // Wallet Functions
     const walletAddresses = {
       BTC: "1FhKcGuxiTVhCoj5kPZ63LnYDCvjRqgv7F",
       USDT: "TXAevYokyEc7HjQuUCyexc61z4se6X8HG7",
@@ -262,9 +294,9 @@
         .catch(() => alert("Failed to copy!"));
     }
 
-    // Progress Bar
+    // Progress Bar Update
     function updateProgress(current = 0, goal = 250000) {
-      const progress = (current/goal)*100;
+      const progress = (current / goal) * 100;
       document.querySelector('.progress-bar').style.width = `${progress}%`;
       document.querySelector('.progress-text').textContent = `${Math.floor(progress)}%`;
       document.querySelector('.donation-total').textContent = 
