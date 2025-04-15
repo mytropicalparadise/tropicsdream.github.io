@@ -248,30 +248,30 @@
     
     // Countdown Clock: Sabit Bitme Tarihi (Örneğin, 31 Aralık 2024)
     const countdownEnd = new Date("2024-12-31T00:00:00").getTime();
-    function startCountdown() {
-      const countdownElement = document.getElementById('countdown-clock');
-      function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = countdownEnd - now;
-        if (distance < 0) {
-          countdownElement.textContent = "";  // "Time's up!" mesajı kaldırıldı
-          clearInterval(interval);
-          return;
-        }
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        countdownElement.textContent =
-          (days < 10 ? "0" + days : days) + "d " +
-          (hours < 10 ? "0" + hours : hours) + "h " +
-          (minutes < 10 ? "0" + minutes : minutes) + "m " +
-          (seconds < 10 ? "0" + seconds : seconds) + "s";
-      }
-      updateCountdown();
-      var interval = setInterval(updateCountdown, 1000);
+function startCountdown() {
+  const countdownElement = document.getElementById('countdown-clock');
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countdownEnd - now;
+    if (distance < 0) {
+      countdownElement.textContent = "";
+      clearInterval(interval);
+      return;
     }
-    startCountdown();
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    countdownElement.textContent =
+      (days < 10 ? "0" + days : days) + "d " +
+      (hours < 10 ? "0" + hours : hours) + "h " +
+      (minutes < 10 ? "0" + minutes : minutes) + "m " +
+      (seconds < 10 ? "0" + seconds : seconds) + "s";
+  }
+  updateCountdown();
+  var interval = setInterval(updateCountdown, 1000);
+}
+startCountdown();
     
     // Cüzdan Adresleri (Kendi adreslerinizi ekleyin)
     const walletAddresses = {
@@ -289,7 +289,7 @@
       const walletQRImg = document.getElementById('wallet-qr');
       
       const address = walletAddresses[coin] || "Address not set";
-      // QR Kod: QrServer API'sini kullanıyoruz; burada color=ffffff (içi beyaz) ve bgcolor=000000 (arkası siyah)
+      // QR Kod: QrServer API'sini kullanıyoruz; burada color=000000 (içi siyah) ve bgcolor=ffffff (arkası beyaz)
       const qrURL = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(address) + "&size=150x150&color=ffffff&bgcolor=000000";
       
       walletQRImg.src = qrURL;
