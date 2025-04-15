@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help Fund My Tropical Paradise Bar</title>
-  <!-- Google Fonts: Montserrat and Pacifico for footer -->
+  <!-- Google Fonts: Montserrat and Pacifico -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     /* Reset */
@@ -13,7 +13,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-    /* Body & Arka Plan */
+    /* Body & Background */
     body {
       font-family: 'Montserrat', sans-serif;
       background: url('https://i.postimg.cc/zfhV6jc0/Flux-Dev-I-will-make-a-background-for-my-site-I-want-a-very-ni-0-1.jpg') no-repeat center center fixed;
@@ -21,19 +21,16 @@
       color: #fefefe;
       min-height: 100vh;
       padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
       position: relative;
     }
-    /* Logo (üstte, container dışında, ortada) */
+    /* Logo: Üstte, container dışında, ortada */
     .logo {
       width: 150px;
       margin: 20px auto;
       display: block;
     }
-    /* Container: Siyah %50 şeffaf çerçeve */
+    /* Container: Siyah, %50 şeffaf */
     .container {
       background: rgba(0, 0, 0, 0.5);
       border-radius: 15px;
@@ -42,16 +39,17 @@
       width: 100%;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
       animation: fadeIn 1s ease-in-out forwards;
+      margin: 20px auto;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    /* Header: Başlık ve Açıklama */
+    /* Header */
     header h1 {
       font-size: 3rem;
-      color: white; /* Beyaz başlık */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 20px;
@@ -59,7 +57,7 @@
     header p {
       font-size: 1.2rem;
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7); /* Soluk beyaz */
+      color: rgba(255, 255, 255, 0.7);
       margin-bottom: 30px;
       max-width: 800px;
       margin: 0 auto 30px;
@@ -73,7 +71,7 @@
     }
     .progress {
       height: 30px;
-      background: #000; /* Siyah dış çubuk */
+      background: #000;
       border-radius: 15px;
       position: relative;
       overflow: hidden;
@@ -81,8 +79,8 @@
     }
     .progress-bar {
       height: 100%;
-      background: #fff; /* Beyaz dolum */
-      width: 20%; /* Örnek: %20 doluluk */
+      background: #fff;
+      width: 20%;
       border-radius: 15px;
       transition: width 0.5s ease;
       position: relative;
@@ -95,16 +93,16 @@
       transform: translateY(-50%);
       font-size: 1rem;
       font-weight: bold;
-      color: #4CAF50; /* Yeşil yüzde yazısı */
+      color: #4CAF50;
     }
-    /* Donation Buttons: Coin Türü Seçimi */
+    /* Donation Buttons (Coin Türü Seçimi) */
     .donation-buttons {
       margin-top: 30px;
     }
     .donation-buttons h2 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: white; 
+      color: white;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -116,13 +114,13 @@
       gap: 20px;
     }
     .coin-btn {
-      background-color: #000; /* Siyah buton */
+      background-color: #000;
       padding: 1rem 2rem;
       font-size: 1.2rem;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      color: grey; /* Buton içindeki yazı gri */
+      color: grey;
       text-transform: uppercase;
       letter-spacing: 1px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
@@ -133,7 +131,7 @@
       transform: translateY(-5px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.7);
     }
-    /* Wallet Info: QR kod ve Cüzdan Adresi */
+    /* Wallet Info (QR kod ve cüzdan adresi) */
     .wallet-info {
       margin-top: 30px;
       padding: 20px;
@@ -161,11 +159,11 @@
     #copy-btn {
       background: none;
       border: none;
-      color: white;
       cursor: pointer;
       font-size: 1.2rem;
+      color: white;
     }
-    /* Countdown Clock: Geri sayım saati */
+    /* Countdown Clock */
     .countdown {
       font-size: 1.5rem;
       margin-top: 30px;
@@ -173,7 +171,7 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       font-weight: 600;
     }
-    /* Footer: Script fontu, beyaz */
+    /* Footer */
     footer {
       margin-top: 30px;
       font-size: 1.2rem;
@@ -183,13 +181,13 @@
   </style>
 </head>
 <body>
-  <!-- Arka Plan Müziği: Otomatik, loop, ses %50 -->
+  <!-- Arka Plan Müziği: %50 ses seviyesi -->
   <audio autoplay loop id="bg-music">
     <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   
-  <!-- Logo: Üstte, container dışında ortada -->
+  <!-- Logo: Üstte, container dışı, ortada -->
   <img src="https://i.postimg.cc/xTMybPCL/Ekran-Al-nt-s-removebg-preview.png" alt="Logo" class="logo">
   
   <div class="container">
@@ -216,15 +214,10 @@
     <section class="donation-buttons">
       <h2>Make a Donation</h2>
       <div class="buttons-container">
-        <!-- BTC -->
         <button type="button" class="coin-btn" onclick="showWallet('BTC')">BTC</button>
-        <!-- USDT (ERC20) -->
         <button type="button" class="coin-btn" onclick="showWallet('USDT')">USDT (ERC20)</button>
-        <!-- ETH -->
         <button type="button" class="coin-btn" onclick="showWallet('ETH')">ETH</button>
-        <!-- LTC -->
         <button type="button" class="coin-btn" onclick="showWallet('LTC')">LTC</button>
-        <!-- BNB -->
         <button type="button" class="coin-btn" onclick="showWallet('BNB')">BNB</button>
       </div>
     </section>
@@ -250,10 +243,10 @@
   </div>
   
   <script>
-    // Arka plan müziği sesini %50 ayarla
+    // Arka Plan Müziği Sesini %50 Ayarla
     document.getElementById('bg-music').volume = 0.5;
-
-    // Countdown Clock: Sabit bitiş tarihi (örnek: 31 Aralık 2024)
+    
+    // Countdown Clock: Sabit Bitme Tarihi (Örneğin, 31 Aralık 2024)
     const countdownEnd = new Date("2024-12-31T00:00:00").getTime();
     function startCountdown() {
       const countdownElement = document.getElementById('countdown-clock');
@@ -261,7 +254,7 @@
         const now = new Date().getTime();
         const distance = countdownEnd - now;
         if (distance < 0) {
-          countdownElement.textContent = "Time's up!";
+          countdownElement.textContent = "";  // "Time's up!" mesajı kaldırıldı
           clearInterval(interval);
           return;
         }
@@ -280,24 +273,24 @@
     }
     startCountdown();
     
-    // Wallet Addresses: Kendi cüzdan adreslerinizi ekleyin.
+    // Cüzdan Adresleri (Kendi adreslerinizi ekleyin)
     const walletAddresses = {
-      BTC: "3E1nK4YNp8s47bnRtkNDz2XxgwRXunoQra",
-      USDT: "0xExampleUSDTAddress",
-      ETH: "0xExampleETHAddress",
-      LTC: "LExampleLTCAddress",
-      BNB: "bnb1exampleaddress"
+      BTC: "1FhKcGuxiTVhCoj5kPZ63LnYDCvjRqgv7F",
+      USDT: "0xaeff3e724a7e0d933eb48961976ba6464176605a",
+      ETH: "0xaeff3e724a7e0d933eb48961976ba6464176605a",
+      LTC: "LYbBuwEC9R8Hy1Qk2X7mW78G7C5iBTXSkY",
+      BNB: "0xaeff3e724a7e0d933eb48961976ba6464176605a"
     };
     
-    // showWallet: Seçilen coin türüne göre cüzdan bilgisini gösterir.
+    // Seçilen coin türüne göre cüzdan bilgisini gösterir
     function showWallet(coin) {
       const walletInfoDiv = document.getElementById('wallet-info');
       const walletAddressP = document.getElementById('wallet-address');
       const walletQRImg = document.getElementById('wallet-qr');
       
       const address = walletAddresses[coin] || "Address not set";
-      // QR kod oluşturmak için ücretsiz API: https://api.qrserver.com
-      const qrURL = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(address) + "&size=150x150&bgcolor=ffffff00";
+      // QR Kod: QrServer API'sini kullanıyoruz; burada color=ffffff (içi beyaz) ve bgcolor=000000 (arkası siyah)
+      const qrURL = "https://api.qrserver.com/v1/create-qr-code/?data=" + encodeURIComponent(address) + "&size=150x150&color=ffffff&bgcolor=000000";
       
       walletQRImg.src = qrURL;
       walletAddressP.textContent = address;
@@ -305,7 +298,7 @@
       walletInfoDiv.style.display = "flex";
     }
     
-    // Copy Address: Cüzdan adresini kopyalamak için.
+    // Adresi kopyalama işlemi
     function copyAddress() {
       const addressText = document.getElementById('wallet-address').textContent;
       navigator.clipboard.writeText(addressText).then(function() {
@@ -315,8 +308,8 @@
       });
     }
     
-    // Progress Bar: Örnek olarak 50,000 USD toplanmış
-    function updateProgress(current = 50000, goal = 250000) {
+    // Progress Bar: Örnek olarak 50,000 USD toplandığında
+    function updateProgress(current = 0, goal = 250000) {
       const progress = (current / goal) * 100;
       const progressBar = document.querySelector('.progress-bar');
       const progressText = document.querySelector('.progress-text');
